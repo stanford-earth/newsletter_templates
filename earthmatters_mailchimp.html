@@ -266,22 +266,6 @@ text-decoration: underline
                 	
 <tr><td height="10"></td></tr>
 
-<!--------- state of the earth --------->                	
-<tr>
-<td>
-<table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
-                			
-<tr bgcolor="FFFFFF">
-<tr>
-<td height="27" style="background-color: #9a4121;"><p class=head>State of the Earth</p></td>
-</tr>
-<tr>
-<td align="left" valign="top" mc:edit="state-of-the-earth"><br><br></td>
-</tr>
-</table>
-</td>
-</tr><!--------- end state of the earth --------->
-                	
 <tr><td height="10"></td></tr>
 
 <!--------- news summary --------->                	
@@ -293,8 +277,30 @@ text-decoration: underline
 <tr>
 <td height="27" style="background-color: #357082;"><p class=head>News Summary</p></td>
 </tr>
+<tr mc:repeatable>
+<td align="left" valign="top">
+<table cellspacing="0" cellpadding="5">
 <tr>
-<td align="left" valign="top" mc:edit="news-summary"><br><br></td>
+<td width="25%"><img src="http://news.stanford.edu/sr/images/placeholder-183x122.png" mc:label="image" style="max-width: 183px; max-height: 122px;" mc:edit="newsimage"></td>
+<td>
+<div mc:edit="news">
+<h3 mc:edit="header">header</h3>
+<div mc:edit="teaser">Copy</div>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan=2">
+<div mc:hideable>
+<h5>More news...</h5>
+<ul>
+<li mc:repeatable><span mc:edit="newslink"></li>
+</ul>
+</div>
+</td>
 </tr>
 </table>
 </td>
