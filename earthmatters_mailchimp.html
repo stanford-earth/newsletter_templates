@@ -292,7 +292,6 @@ text-decoration: underline
 <tr>
 <td colspan=2">
 <div mc:hideable>
-<h5>More news...</h5>
 <ul>
 <li mc:repeatable><span mc:edit="newslink"></li>
 </ul>
@@ -306,6 +305,7 @@ text-decoration: underline
 <tr><td height="10"></td></tr>
 
 <!--------- faculty news --------->                	
+
 <tr>
 <td>
 <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
@@ -314,34 +314,76 @@ text-decoration: underline
 <tr>
 <td height="27" style="background-color: #5d5f9c;" class="head" mc:edit="facultytitle">Faculty News</td>
 </tr>
+<tr mc:repeatable>
+<td align="left" valign="top">
+<table cellspacing="0" cellpadding="5">
 <tr>
-<td align="left" valign="top" mc:edit="faculty-news"><br><br></td>
-</tr>	
+<td width="25%"><img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" mc:label="image" style="max-width: 298px; max-height: 156px;" mc:edit="facultyimage"></td>
+<td valign="top">
+<h3 mc:edit="newsheader" class="subhead">header</h3>
+<div mc:edit="newsteaser">Copy</div>
+</td>
+</tr>
 </table>
 </td>
-</tr><!--------- end faculty news --------->
+</tr>
+<tr>
+<td colspan=2">
+<div mc:hideable>
+<ul>
+<li mc:repeatable><span mc:edit="facultylink"></li>
+</ul>
+</div>
+<div mc:hideable>
+<h5>Honors and Awards...</h5>
+<ul>
+<li mc:repeatable><span mc:edit="honorslink"></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr><!--------- end news summary --------->
                 	
 <tr><td height="10"></td></tr>
-                	
-<!--------- Features1 --------->
+
 <tr>
 <td>
-                						
-<!-- alumni news -->
 <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
+                			
 <tr bgcolor="FFFFFF">
-<td height="27" style="background-color: #b47e00;" class="head" mc:edit="alumniTitle">Alumni News &amp; Class Notes</td>
-</tr>
 <tr>
-<td align="left" valign="top" mc:edit="alumni-news"><br><br></td>
+<td height="27" style="background-color: #b47e00;" class="head" mc:edit="alumnititle">Alumni News &amp; Class Notes</td>
 </tr>
-
+<tr mc:repeatable>
+<td align="left" valign="top">
+<table cellspacing="0" cellpadding="5">
+<tr>
+<td width="25%"><img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" mc:label="image" style="max-width: 298px; max-height: 156px;" mc:edit="facultyimage"></td>
+<td valign="top">
+<h3 mc:edit="newsheader" class="subhead">header</h3>
+<div mc:edit="newsteaser">Copy</div>
+</td>
+</tr>
 </table>
-<!-- end alumni news -->
-</td>                						
-<tr>
-<td height="10" width="10"></td>
+</td>
 </tr>
+<tr>
+<td colspan=2">
+<div mc:hideable>
+<ul>
+<li mc:repeatable><span mc:edit="alumnilink"></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+           						
+<tr><td height="10" width="10"></td></tr>
+
 <tr>
 <td>                						
 <!-- upcoming events -->
