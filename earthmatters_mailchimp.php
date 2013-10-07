@@ -128,6 +128,10 @@ $sections = array(
             text-decoration: underline 
         }
 
+        .main-image {
+            margin-right: 5px;
+        }
+
         .links { 
             color: #333333; 
             font-size: 14px; 
@@ -175,7 +179,7 @@ $sections = array(
             font-weight: normal;
             text-decoration: none; 
             line-height: 20px;
-            margin-bottom: .5em;
+            margin: 0 0 .5em 0;
         }
 
         html{
@@ -303,15 +307,17 @@ $sections = array(
                 <td>
                     <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
                         <tr bgcolor="FFFFFF">
-                            <td colspan="2" height="27" style="background-color: <?= $section['bgcolor'] ?>;" class="head" mc:edit="<?= $section['bgcolor'] ?>title">
+                            <td height="27" style="background-color: <?= $section['bgcolor'] ?>;" class="head" mc:edit="<?= $section['bgcolor'] ?>title">
                                 <?= $section['title'] ?>
                             </td>
                         </tr>
                         <tr>
-                            <td valign="top" style="padding: 5px;"><img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" mc:label="image" mc:edit="<?= $section['id'] ?>-image" align="left" style="margin-right: 5px; max-width: 298px; max-height: 156px;"></td>
-                            <td valign="top" style="padding: 5px;" width="100%">
-                                    <h3 mc:edit="<?= $section['id'] ?>-header" class="subhead">header</h3>
-                                    <div mc:edit="<?= $section['id'] ?>-teaser" class="main">Copy</div>
+                            <td valign="top" style="padding: 5px;">
+                                <p class="subhead">
+                                <span mc:edit="<?= $section['id'] ?>-image"><img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" align="left" style="max-width: 298px; max-height: 156px;"></span>
+                                <span mc:edit="<?= $section['id'] ?>-header">header</span>
+                                </p>
+                                <div mc:edit="<?= $section['id'] ?>-teaser" class="main">Copy</div>
                             </td>
                         </tr>
                         <tr>
