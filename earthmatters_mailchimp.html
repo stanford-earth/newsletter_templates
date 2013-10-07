@@ -37,10 +37,6 @@ li {
 margin: 10px;
 }
 
-img {
-  max-width: 100%;
-}
-
 table {
 margin: auto;
 }
@@ -251,25 +247,22 @@ text-decoration: underline
 <!--------- dean's letter --------->                	
 <tr>
 <td>
-<table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="5" class="container-middle">
+<table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
                 			
 <tr bgcolor="FFFFFF">
 <td height="27" style="background-color: #1c5c99;" class="head" mc:edit="deanstitle">Dean's Letter</td>
 </tr>
 <tr>
-<td align="left" valign="top">
-<img src="https://stanford.box.com/shared/static/mnxkcao8l5n8is3f2o8w.jpg" alt="Pam Matson" align="left">
-<div mc:edit="deans-letter">
+<td valign="top" style="padding: 5px;">
+<img src="https://stanford.box.com/shared/static/mnxkcao8l5n8is3f2o8w.jpg" class="main-image" alt="Pam Matson" align="left">
 <h3 mc:edit="deansheader" class="subhead">header</h3>
 <div mc:edit="deansteaser">Teaser</div>
-</div></td>
+</td>
 </tr>
 </table>
 </td>
 </tr><!--------- end dean's letter --------->
                 	
-<tr><td height="10"></td></tr>
-
 <tr><td height="10"></td></tr>
 
 <!--------- news summary --------->                	
@@ -282,20 +275,13 @@ text-decoration: underline
 <td height="27" style="background-color: #357082;" class="head" mc:edit="newstitle">News Summary</td>
 </tr>
 <tr mc:repeatable>
-<td align="left" valign="top">
-<table cellspacing="0" cellpadding="5">
-<tr>
-<td width="25%"><img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" mc:label="image" style="max-width: 298px; max-height: 156px;" mc:edit="newsimage"></td>
-<td valign="top">
+<td valign="top" style="padding: 5px;"><img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" mc:label="image" mc:edit="newsimage" align="left" style="margin-right: 5px;">
 <h3 mc:edit="newsheader" class="subhead">header</h3>
 <div mc:edit="newsteaser">Copy</div>
 </td>
 </tr>
-</table>
-</td>
-</tr>
 <tr>
-<td colspan=2">
+<td>
 <div mc:hideable>
 <ul>
 <li mc:repeatable><span mc:edit="newslink"></li>
@@ -320,16 +306,10 @@ text-decoration: underline
 <td height="27" style="background-color: #5d5f9c;" class="head" mc:edit="facultytitle">Faculty News</td>
 </tr>
 <tr mc:repeatable>
-<td align="left" valign="top">
-<table cellspacing="0" cellpadding="5">
-<tr>
-<td width="25%"><img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" mc:label="image" style="max-width: 298px; max-height: 156px;" mc:edit="facultyimage"></td>
-<td valign="top">
-<h3 mc:edit="newsheader" class="subhead">header</h3>
-<div mc:edit="newsteaser">Copy</div>
-</td>
-</tr>
-</table>
+<td style="padding: 5px;" valign="top">
+  <img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" mc:label="image" mc:edit="facultyimage" style="margin-right: 5px;" align="left">
+  <h3 mc:edit="newsheader" class="subhead">header</h3>
+  <div mc:edit="newsteaser">Copy</div>
 </td>
 </tr>
 <tr>
@@ -362,13 +342,10 @@ text-decoration: underline
 <td height="27" style="background-color: #b47e00;" class="head" mc:edit="alumnititle">Alumni News &amp; Class Notes</td>
 </tr>
 <tr mc:repeatable>
-<td align="left" valign="top">
-<table cellspacing="0" cellpadding="5">
-<tr>
-<td width="25%"><img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" mc:label="image" style="max-width: 298px; max-height: 156px;" mc:edit="facultyimage"></td>
-<td valign="top">
-<h3 mc:edit="newsheader" class="subhead">header</h3>
-<div mc:edit="newsteaser">Copy</div>
+<td style="padding: 5px;" valign="top">
+  <img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" mc:label="image" mc:edit="facultyimage" align="left" style="margin-right: 5px;">
+  <h3 mc:edit="newsheader" class="subhead">header</h3>
+  <div mc:edit="newsteaser">Copy</div>
 </td>
 </tr>
 </table>
@@ -398,7 +375,13 @@ text-decoration: underline
 <td height="27" style="background-color: #497b00;" class="head" mc:edit="eventsTitle">Upcoming Events</td>
 </tr>
 <tr>
-<td align="left" valign="top" mc:edit="upcoming-events"><br><br></td>
+<td align="left" valign="top">
+<div mc:hideable>
+<ul>
+<li mc:repeatable><span mc:edit="eventlink"></span></li>
+</ul>
+</div>
+</td>
 </tr>
 </table>
 <!-- end upcoming events -->
