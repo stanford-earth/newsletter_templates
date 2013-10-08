@@ -103,6 +103,13 @@ $sections = array(
             border-top: 0 !important;
         }
 
+        .banner td {
+            padding: 3px 15px 3px 20px;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
         .main { 
             color: #333333; 
             font-size: 14px; 
@@ -230,8 +237,10 @@ $sections = array(
             .container-middle{width: 420px !important;}
             .mainContent{width: 400px !important;}
 
-            .main-image{width: 400px !important; height: auto !important;}
-            .banner{width: 400px !important; height: auto !important;}
+            .main-image{/*width: 400px !important;*/ height: auto !important;}
+            .subhead .main-image {max-width: 165px !important;}
+            .banner{width: 417px !important; height: auto !important;}
+            .banner td {padding: 3px 5px;}
             /*------ sections ---------*/
             .section-item{width: 400px !important;}
             .section-img{width: 400px !important; height: auto !important;}
@@ -246,6 +255,7 @@ $sections = array(
         @media only screen and (max-width: 479px){
 
          /*------ top header ------ */
+         .banner td {padding: 3px 5px;}
          .header-bg{width: 280px !important; height: 10px !important;}
          .top-header-left{width: 260px !important; text-align: center !important;}
          .top-header-right{width: 260px !important;}
@@ -266,8 +276,9 @@ $sections = array(
          .container-middle{width: 260px !important;}
          .mainContent{width: 240px !important;}
 
-         .main-image{width: 240px !important; height: auto !important;}
-         .banner{width: 240px !important; height: auto !important;}
+         .main-image{width: 260px !important; height: auto !important;}
+         .subhead .main-image {max-width: 260px !important; margin: 0 0 .25em 0;}
+         .banner{width: 260px !important; height: auto !important;}
          /*------ sections ---------*/
          .section-item{width: 240px !important;}
          .section-img{width: 240px !important; height: auto !important;}
@@ -291,8 +302,8 @@ $sections = array(
                             <td align="center" colspan="2"><img style="display: block;" class="main-image" width="735" height="206" src="https://stanford.box.com/shared/static/g4fph4ur2ru54wl8t0l4.png" alt="Stanford School Of Earth Science - Earth Matters" /></td>
                         </tr>
                     </table>
-                    <table border="0" width="735" align="center" cellpadding="5" cellspacing="0" class="container-middle">
-                        <tr style="background-color: #a08a8f; color: #ffffff; text-transform: uppercase; font-size: 12px;" class="banner">
+                    <table border="0" width="735" align="center" cellpadding="3" cellspacing="0" class="container-middle banner" bgcolor="#a09a8f">
+                        <tr>
                             <td align="left" mc:edit="header-text-left">A Quarterly Newsletter From</td>
                             <td align="right" mc:edit="header-text-right">Autumn 2013</td>
                         </tr>
@@ -342,7 +353,7 @@ $sections = array(
                             <td>
 
                                 <!-- credits -->
-                                <table border="0" width="362" height="362" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature">
+                                <table border="0" width="362" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature">
                                     <tr><td align="left" valign="top"i mc:edit="footer-left">
                                         <p class=footer><b>Earth Matters</b> is produced quarterly by the Stanford School of Earth Sciences. We look forward to your <a href="#">story ideas</a>, <a href="#">comments</a> and <a href="#"> alumni updates</a>.<br><br>
                                             <b>Pam Matson</b>, <i>Dean</i><br>
