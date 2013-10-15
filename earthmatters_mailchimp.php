@@ -1,70 +1,16 @@
-<?
-$sections = array(
-    array(
-        "id" => "dean",
-        "position" => 1,
-        "title" => "Dean's Letter",
-        "bgcolor" => "#1c5c99",
-        "features" => FALSE,
-        "listitems" => FALSE
-        ),
-    array(
-        "id" => "news",
-        "position" => 2,
-        "title" => "News &amp; Discoveries",
-        "bgcolor" => "#357082",
-        "features" => TRUE,
-        "listitems" => TRUE
-        ),
-    array(
-        "id" => "faculty",
-        "position" => 3,
-        "title" => "Faculty News &amp; Honors",
-        "bgcolor" => "#5d5f9c",
-        "features" => TRUE,
-        "listitems" => TRUE
-        ),
-    array(
-        "id" => "teaching",
-        "position" => 4,
-        "title" => "Teaching & Learning",
-        "bgcolor" => "#9a4121",
-        "features" => TRUE,
-        "listitems" => TRUE
-        ),
-    array(
-        "id" => "alumni",
-        "position" => 5,
-        "title" => "Alumni News &amp; Class Notes",
-        "bgcolor" => "#b47e00",
-        "features" => TRUE,
-        "listitems" => TRUE
-        ),
-    array(
-        "id" => "events",
-        "position" => 6,
-        "title" => "Upcoming Events",
-        "bgcolor" => "#497b00",
-        "features" => TRUE,
-        "listitems" => TRUE
-        )
-    );
-    ?>
 
     <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
 
         <!-- Define Charset -->
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 
         <!-- Responsive Meta Tag -->
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 
-        <title>Stanford School of Earth Sciences</title>
+        <title>*|MC:SUBJECT|* | *|LIST:COMPANY|*</title>
 
         <style type="text/css">
 
@@ -72,9 +18,27 @@ $sections = array(
             width: 100%; 
             background-color: #FFFFFF; 
             font-family: 'Source Sans Pro', sans-serif;
+            font-size: 14px;
             margin:0; 
             padding:0; 
             -webkit-font-smoothing: antialiased;
+        }
+
+        .section a {
+            color: #cc0000 !important;
+        }
+
+        .section a:hover {
+            text-decoration: underline !important;
+        }
+
+	.section .subhead a {
+	    color: inherit !important;
+	    text-decoration: none;
+	}
+
+        .feature .text {
+            margin-left: 310px !important;
         }
 
         ul {
@@ -136,7 +100,11 @@ $sections = array(
         }
 
         .main-image {
-            margin-right: 5px;
+            margin-right: 10px;
+        }
+
+        .feature .main-image {
+            border: 1px solid #cccccc;
         }
 
         .links { 
@@ -145,23 +113,30 @@ $sections = array(
             font-weight: 400; 
             text-decoration: none; 
             line-height: 18px; 
-            margin-left: 6pt; 
-            margin-right: 24pt 
+            margin-left: 15px; 
+            margin-right: 24pt;
+            padding: 10px;
         }
 
         .links a:link  { 
-            color: #333333; 
+            color: #333333 !important; 
             text-decoration: none 
         }
 
         .links a:visited  { 
-            color: #333333; 
+            color: #333333 !important; 
             text-decoration: none 
         }
 
         .links a:hover  { 
-            color: #CC0000; 
-            text-decoration: underline 
+            color: #CC0000 !important; 
+            text-decoration: underline !important; 
+        }
+
+        .links .title {
+            font-size: inherit;
+            font-weight: normal;
+            color: #CC0000;
         }
 
         p,h1,h2,h3,h4{
@@ -179,14 +154,18 @@ $sections = array(
             padding: 2px 5px;
         }
 
+        .feature {
+            padding: 5px 5px 15px 5px;
+        }
+
         .subhead {
             color: #333333;
-            font-size: 22px;
+            font-size: 20px;
             font-family: 'Crimson Text', serif;
             font-weight: normal;
             text-decoration: none; 
             line-height: 20px;
-            margin: 0 0 .5em 0;
+            margin: 0 0 .25em 0;
         }
 
         html{
@@ -238,7 +217,10 @@ $sections = array(
             .mainContent{width: 400px !important;}
 
             .main-image{/*width: 400px !important;*/ height: auto !important;}
-            .subhead .main-image {max-width: 165px !important;}
+            .feature .main-image {max-width: 165px !important;}
+            .feature .text {
+                margin-left: 165px !important;
+            }
             .banner{width: 417px !important; height: auto !important;}
             .banner td {padding: 3px 5px;}
             /*------ sections ---------*/
@@ -270,14 +252,17 @@ $sections = array(
          .feature{width: 260px !important;}
          .feature-middle{width: 240px !important; text-align: center !important;}
          .feature-img{width: 240px !important; height: auto !important;}
+         .feature .text {
+             margin-left: 1px !important;
+         }
 
 
          .container{width: 280px !important;}
          .container-middle{width: 260px !important;}
          .mainContent{width: 240px !important;}
 
-         .main-image{width: 260px !important; height: auto !important;}
-         .subhead .main-image {max-width: 260px !important; margin: 0 0 .25em 0;}
+         .main-image{width: 260px !important; height: auto !important; margin-right: 0 !important;}
+         .section .main-image {max-width: 246px !important; margin: 0 0 .25em 0;}
          .banner{width: 260px !important; height: auto !important;}
          /*------ sections ---------*/
          .section-item{width: 240px !important;}
@@ -294,18 +279,25 @@ $sections = array(
  <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
     <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
         <table width="800" border="0" cellpadding="0" cellspacing="0" align="center" class="container" bgcolor="FFFFFF">
+            
             <!-- banner -->                 
             <tr>
                 <td>
-                    <table border="0" width="735" align="center" cellpadding="0" cellspacing="0" class="container-middle">
-                        <tr bgcolor="FFFFFF">
-                            <td align="center" colspan="2"><img style="display: block;" class="main-image" width="735" height="206" src="https://stanford.box.com/shared/static/g4fph4ur2ru54wl8t0l4.png" alt="Stanford School Of Earth Science - Earth Matters" /></td>
+                    <table border="0" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
+                        <tr><td height="10"></td></tr>
+                        <tr class="footer">
+                            <td>*|LIST:DESCRIPTION|*</td>
+                            <td align="right"><a href="*|ARCHIVE|*">View this email in your browser.</a></td>
+                        </tr>
+                        <tr><td height="10"></td></tr>
+                        <tr bgcolor="#FFFFFF">
+                            <td align="center" colspan="2"><img style="display: block;" class="main-image" width="735" height="206" src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/https/gallery.mailchimp.com/167e9da7acec83c4cc802b3e7/images/earthmatters_banner.2.png" alt="Stanford School Of Earth Science - Earth Matters" mc:edit="banner-image"></td>
                         </tr>
                     </table>
-                    <table border="0" width="735" align="center" cellpadding="3" cellspacing="0" class="container-middle banner" bgcolor="#a09a8f">
+                    <table border="0" width="735" align="center" cellpadding="3" cellspacing="0" class="container-middle banner">
                         <tr>
-                            <td align="left" mc:edit="header-text-left">A Quarterly Newsletter From</td>
-                            <td align="right" mc:edit="header-text-right">Autumn 2013</td>
+                            <td align="left" bgcolor="#a09a8f" mc:edit="header-text-left"></td>
+                            <td align="right" bgcolor="#a09a8f" mc:edit="header-text-right">Autumn 2013</td>
                         </tr>
                     </table>
                 </td>
@@ -313,29 +305,26 @@ $sections = array(
             <!-- end banner -->
 
             <tr><td height="10"></td></tr>
-            <? foreach ($sections as $section) { ?>
-            <tr>
+                        <tr>
                 <td>
-                    <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
+                    <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
                         <tr bgcolor="FFFFFF">
-                            <td height="27" style="background-color: <?= $section['bgcolor'] ?>;" class="head" mc:edit="<?= $section['bgcolor'] ?>title">
-                                <?= $section['title'] ?>
+                            <td height="27" bgcolor="#1c5c99" class="head" mc:edit="deantitle">
+                                Dean's Letter                            </td>
+                        </tr>
+                        <tr style=" border-bottom: 2px solid #ccc;" mc:repeatable="">
+                            <td valign="top" class="feature" mc:edit="dean-feature">
+                                <img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" align="left">
+                                <h3 class="subhead">header</h3>
+                                <p>Copy</p>
                             </td>
                         </tr>
                         <tr>
-                            <td valign="top" style="padding: 5px;">
-                                <p class="subhead">
-                                <span mc:edit="<?= $section['id'] ?>-image"><img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" align="left" style="max-width: 298px; max-height: 156px;"></span>
-                                <span mc:edit="<?= $section['id'] ?>-header">header</span>
-                                </p>
-                                <div mc:edit="<?= $section['id'] ?>-teaser" class="main">Copy</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div mc:hideable mc:repeatable>
+                            <td class="links">
+                                <h3 class="title" mc:hideable=""><span mc:edit="dean-listtitle">List Title</span></h3>
+                                <div mc:hideable="">
                                     <ul>
-                                        <li mc:repeatable><span mc:edit="<?= $section['id'] ?>-link">link</li>
+                                        <li mc:repeatable=""><span mc:edit="dean-link"><a href="">link</a></span></li>
                                     </ul>
                                 </div>
                             </td>
@@ -344,18 +333,157 @@ $sections = array(
                 </td>
             </tr>
             <tr><td height="10"></td></tr>
-            <? } ?>
-            <!-- Features2 -->
+                        <tr>
+                <td>
+                    <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
+                        <tr bgcolor="FFFFFF">
+                            <td height="27" bgcolor="#357082" class="head" mc:edit="newstitle">
+                                News &amp; Discoveries                            </td>
+                        </tr>
+                        <tr style=" border-bottom: 2px solid #ccc;" mc:repeatable="">
+                            <td valign="top" class="feature" mc:edit="news-feature">
+                                <img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" align="left">
+                                <h3 class="subhead">header</h3>
+                                <p>Copy</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="links">
+                                <h3 class="title" mc:hideable=""><span mc:edit="news-listtitle">List Title</span></h3>
+                                <div mc:hideable="">
+                                    <ul>
+                                        <li mc:repeatable=""><span mc:edit="news-link"><a href="">link</a></span></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td height="10"></td></tr>
+                        <tr>
+                <td>
+                    <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
+                        <tr bgcolor="FFFFFF">
+                            <td height="27" bgcolor="#5d5f9c" class="head" mc:edit="facultytitle">
+                                Faculty News &amp; Honors                            </td>
+                        </tr>
+                        <tr style=" border-bottom: 2px solid #ccc;" mc:repeatable="">
+                            <td valign="top" class="feature" mc:edit="faculty-feature">
+                                <img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" align="left">
+                                <h3 class="subhead">header</h3>
+                                <p>Copy</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="links">
+                                <h3 class="title" mc:hideable=""><span mc:edit="faculty-listtitle">List Title</span></h3>
+                                <div mc:hideable="">
+                                    <ul>
+                                        <li mc:repeatable=""><span mc:edit="faculty-link"><a href="">link</a></span></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td height="10"></td></tr>
+                        <tr>
+                <td>
+                    <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
+                        <tr bgcolor="FFFFFF">
+                            <td height="27" bgcolor="#9a4121" class="head" mc:edit="teachingtitle">
+                                Teaching & Learning                            </td>
+                        </tr>
+                        <tr style=" border-bottom: 2px solid #ccc;" mc:repeatable="">
+                            <td valign="top" class="feature" mc:edit="teaching-feature">
+                                <img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" align="left">
+                                <h3 class="subhead">header</h3>
+                                <p>Copy</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="links">
+                                <h3 class="title" mc:hideable=""><span mc:edit="teaching-listtitle">List Title</span></h3>
+                                <div mc:hideable="">
+                                    <ul>
+                                        <li mc:repeatable=""><span mc:edit="teaching-link"><a href="">link</a></span></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td height="10"></td></tr>
+                        <tr>
+                <td>
+                    <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
+                        <tr bgcolor="FFFFFF">
+                            <td height="27" bgcolor="#b47e00" class="head" mc:edit="alumnititle">
+                                Alumni News &amp; Class Notes                            </td>
+                        </tr>
+                        <tr style=" border-bottom: 2px solid #ccc;" mc:repeatable="">
+                            <td valign="top" class="feature" mc:edit="alumni-feature">
+                                <img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" align="left">
+                                <h3 class="subhead">header</h3>
+                                <p>Copy</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="links">
+                                <h3 class="title" mc:hideable=""><span mc:edit="alumni-listtitle">List Title</span></h3>
+                                <div mc:hideable="">
+                                    <ul>
+                                        <li mc:repeatable=""><span mc:edit="alumni-link"><a href="">link</a></span></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td height="10"></td></tr>
+                        <tr>
+                <td>
+                    <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
+                        <tr bgcolor="FFFFFF">
+                            <td height="27" bgcolor="#497b00" class="head" mc:edit="eventstitle">
+                                Upcoming Events                            </td>
+                        </tr>
+                        <tr style=" border-bottom: 2px solid #ccc;" mc:repeatable="">
+                            <td valign="top" class="feature" mc:edit="events-feature">
+                                <img src="https://stanford.box.com/shared/static/mpvufg2q88rppairlub6.png" class="main-image" align="left">
+                                <h3 class="subhead">header</h3>
+                                <p>Copy</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="links">
+                                <h3 class="title" mc:hideable=""><span mc:edit="events-listtitle">List Title</span></h3>
+                                <div mc:hideable="">
+                                    <ul>
+                                        <li mc:repeatable=""><span mc:edit="events-link"><a href="">link</a></span></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td height="10"></td></tr>
+                        <!-- Features2 -->
             <tr>
                 <td>
-                    <table border="0" width="735" align="center" cellpadding="0" cellspacing="0" class="container-middle">
+                    <table border="0" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
                         <tr>
                             <td>
 
                                 <!-- credits -->
                                 <table border="0" width="362" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature">
-                                    <tr><td align="left" valign="top"i mc:edit="footer-left">
-                                        <p class=footer><b>Earth Matters</b> is produced quarterly by the Stanford School of Earth Sciences. We look forward to your <a href="#">story ideas</a>, <a href="#">comments</a> and <a href="#"> alumni updates</a>.<br><br>
+                                    <tr><td align="left" valign="top" i="" mc:edit="footer-left">
+                                        <p class="footer"><b>Earth Matters</b> is produced quarterly by the Stanford School of Earth Sciences. We look forward to your <a href="#">story ideas</a>, <a href="#">comments</a> and <a href="#"> alumni updates</a>.<br><br>
                                             <b>Pam Matson</b>, <i>Dean</i><br>
                                             <b>Nancy Peterson</b>, <i>Editor</i><br>
                                             <b>Rebecca Smith Vogel</b>, <i>Interim Dean for External Relations</i><br>
@@ -366,19 +494,14 @@ $sections = array(
                                             <b>Photography</b><br>
                                             TBD
 
-                                        </td></tr>
+                                        </p></td></tr>
 
                                     </table>
                                     <!-- end credits -->
 
-                                    <table border="0" align="left" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td height="30" width="11"></td>
-                                        </tr>
-                                    </table>
                                     <!-- contact -->
-                                    <table border="0" width="362" height="362" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature">
-                                        <tr><td align="left" valign="top" mc:edit="footer-right"><p class=main><b>Connect to Stanford Earth Sciences</b><br><br><img src="connect.jpg"><p class=footer><a href="http://earth.stanford.edu" target="_blank">earth.stanford.edu</a><br><br><b>Stanford University School of Earth Sciences</b><br>397 Panama Mall<br>Mitchell Building 101<br>Stanford, CA 94305-2210<br>Tel: (650) 723-2544<p class=footer>. . . . . . . . . . . . . . . . . . . .<br><a href="http://alumni.stanford.edu/get/page/magazine/sage" target="_blank"><img src="sage-logo.gif" border="0"></a><br><b>Need eco-advice?</b> Student authors welcome your queries on sustainability and the environment. <a href="http://alumni.stanford.edu/get/page/magazine/sage" target="_blank">>></a><br>. . . . . . . . . . . . . . . . . . . .<br><b>Generation Anthropcene</b><br>Student podcast about planetary change. <a href="http://www.stanford.edu/group/anthropocene/cgi-bin/wordpress/" target="_blank">>></a> </td></tr>
+                                    <table border="0" width="362" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature">
+                                        <tr><td align="left" valign="top" mc:edit="footer-right"><p class="main"><b>Connect to Stanford Earth Sciences</b><br><br><img src="connect.jpg"></p><p class="footer"><a href="http://earth.stanford.edu" target="_blank">earth.stanford.edu</a><br><br><b>Stanford University School of Earth Sciences</b><br>397 Panama Mall<br>Mitchell Building 101<br>Stanford, CA 94305-2210<br>Tel: (650) 723-2544</p><p class="footer">. . . . . . . . . . . . . . . . . . . .<br><a href="http://alumni.stanford.edu/get/page/magazine/sage" target="_blank"><img src="sage-logo.gif" border="0"></a><br><b>Need eco-advice?</b> Student authors welcome your queries on sustainability and the environment. <a href="http://alumni.stanford.edu/get/page/magazine/sage" target="_blank">>></a><br>. . . . . . . . . . . . . . . . . . . .<br><b>Generation Anthropcene</b><br>Student podcast about planetary change. <a href="http://www.stanford.edu/group/anthropocene/cgi-bin/wordpress/" target="_blank">>></a> </p></td></tr>
                                     </table>
                                     <!-- end contact -->
 
@@ -399,3 +522,4 @@ $sections = array(
         </td></tr></table>
     </body>
     </html>
+
