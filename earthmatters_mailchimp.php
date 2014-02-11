@@ -105,7 +105,7 @@ $sections = array(
 			margin:10px;
 		}
 		img{
-			xmax-width:100%;
+			max-width:100%;
 		}
 
 		tbody,td{
@@ -139,9 +139,6 @@ $sections = array(
 		.main a:hover{
 			color:#CC0000;
 			text-decoration:underline;
-		}
-		.main-image{
-			xmargin-right:10px;
 		}
 	 
 		.links{
@@ -189,7 +186,6 @@ $sections = array(
 		}
 		.subhead,.subhead a{
 			color:#333333 !important;
-			font-size:20px;
 			font-family:'Crimson Text', serif;
 			font-weight:normal;
 			text-decoration:none;
@@ -243,7 +239,6 @@ $sections = array(
 
 }	@media only screen and (max-width: 640px){
 		.feature{
-			width:420px !important;
 		}
 
 }	@media only screen and (max-width: 640px){
@@ -409,7 +404,8 @@ $sections = array(
 		}
 
 }	@media only screen and (max-width: 479px){
-		.main-image{
+		.feature .main-image{
+			width: 115px;
 		}
 
 }	@media only screen and (max-width: 479px){
@@ -486,14 +482,14 @@ $sections = array(
                             <td mc:edit="<?= $section['id'] ?>-sectiontitle" height="27" bgcolor="#357082" class="head" style="background-color: <?= $section['bgcolor'] ?>;color: #FFFFFF;font-size: 20px;font-weight: 400;margin-left: 6pt;padding: 2px 5px;border: one !important;border-top: 0 !important;"><?= $section['title']?></td>
                         </tr>
 			<? if($section['features']) { ?>
-                        <tr style=" border-bottom: 2px solid #ccc;" mc:repeatable>
+                        <tr mc:repeatable>
                             <td valign="top" class="feature" style="background-color: auto;padding: 5px 5px 15px 5px;border: none !important;border-top: 0 !important;">
 				<table border="0" cellpadding="0" cellspacing="0">
 					<tr>
 						<td valign="top"><a href="" style="color: #cc0000 !important;"><img mc:edit="<?= $section['id'] ?>-image" border="0" align="left" class="main-image" width="308" height="156" src="https://stanford.box.com/shared/static/ut0loizerxvgef3ht72i.png"></a></td>
 						<td width="10">&nbsp;</td>
 						<td valign="top">
-							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 20px;font-family: serif;font-weight: normal;text-decoration: none;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-size: 20px;font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Header</a></div>
+							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 1.5em;font-family: serif;font-weight: normal;text-decoration: none;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Header</a></div>
 							<div mc:edit="<?= $section['id']?>-teaser">Teaser</div>
 						</td>
 					</tr>
