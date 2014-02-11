@@ -528,7 +528,7 @@ $sections = array(
 					November 2, 2013, 1 p.m. - Atlanta, GA<br>
 					<br>
 				</div>
-        			<p mc:editablestyle="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">Please visit <a href="http://earth.stanford.edu/events?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #cc0000 !important;">earth.stanford.edu/events</a> for a comprehensive list of on-campus events including seminars and lectures.</p>
+        			<p style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">Please visit <a href="http://earth.stanford.edu/events?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #cc0000 !important;">earth.stanford.edu/events</a> for a comprehensive list of on-campus events including seminars and lectures.</p>
 </td>
                         </tr>
 
