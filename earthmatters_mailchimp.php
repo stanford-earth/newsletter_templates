@@ -220,6 +220,11 @@ $sections = array(
 			color:#CC0000;
 			text-decoration:underline;
 		}
+
+	.container-middle {
+        	width: 95%;
+		max-width: 730px;
+        }
 	@media only screen and (max-width: 640px){
 		.header-bg{
 			width:440px !important;
@@ -254,12 +259,12 @@ $sections = array(
 		}
 
 }	@media only screen and (max-width: 640px){
-		.container{
+		.xcontainer{
 			width:440px !important;
 		}
 
 }	@media only screen and (max-width: 640px){
-		.container-middle{
+		.xcontainer-middle{
 			width:420px !important;
 		}
 
@@ -285,7 +290,6 @@ $sections = array(
 
 }	@media only screen and (max-width: 640px){
 		.banner{
-			width:417px !important;
 			height:auto !important;
 		}
 
@@ -390,12 +394,12 @@ $sections = array(
 		}
 
 }	@media only screen and (max-width: 479px){
-		.container{
+		.xcontainer{
 			width:280px !important;
 		}
 
 }	@media only screen and (max-width: 479px){
-		.container-middle{
+		.xcontainer-middle{
 			width:260px !important;
 		}
 
@@ -406,21 +410,14 @@ $sections = array(
 
 }	@media only screen and (max-width: 479px){
 		.main-image{
-			max-width:260px !important;
-			max-height:200px !important;
-			height:auto !important;
-			margin-right:0 !important;
 		}
 
 }	@media only screen and (max-width: 479px){
 		.section .main-image{
-			max-width:246px !important;
-			margin:0 0 .25em 0;
 		}
 
 }	@media only screen and (max-width: 479px){
 		.banner{
-			width:260px !important;
 			height:auto !important;
 		}
 
@@ -456,12 +453,12 @@ $sections = array(
 }</style></head>
  <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="width: 100%;background-color: #FFFFFF;font-family: 'Source Sans Pro', sans-serif;font-size: 14px;margin: 0;padding: 0;-webkit-font-smoothing: antialiased;">
     <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background-color: auto;border: none !important;border-top: 0 !important;">
-        <table width="800" border="0" cellpadding="0" cellspacing="0" class="container" bgcolor="FFFFFF">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="container" bgcolor="FFFFFF">
             
             <!-- banner -->                 
             <tr>
                 <td style="background-color: auto;border: none !important;border-top: 0 !important;">
-                    <table border="0" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
+                    <table border="0" width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle">
                         <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
                         <tr class="footer" style="color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
                             <td colspan="2" align="center" style="background-color: auto;border: none !important;border-top: 0 !important;"><a href="">View this newsletter in your browser.</a></td>
@@ -471,7 +468,7 @@ $sections = array(
                             <td align="center" colspan="2" style="background-color: auto;border: none !important;border-top: 0 !important;"><img border="0" src="https://gallery.mailchimp.com/167e9da7acec83c4cc802b3e7/images/earthmatters_banner.2.png" alt="Stanford School Of Earth Science - Earth Matters" border="0" style="margin: 0;padding: 0;display: block;max-width: 100%;" class="main-image"></td>
                         </tr>
                     </table>
-                    <table border="0" width="735" align="center" cellpadding="3" cellspacing="0" class="container-middle banner">
+                    <table border="0" width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle banner">
                         <tr>
                             <td mc:edit="issue-date" align="right" bgcolor="#a09a8f" style="background-color: #a09a8f;padding: 3px 15px 3px 20px;color: #ffffff;text-transform: uppercase;font-size: 11px;border: none !important;border-top: 0 !important;">Issue Date</td>
                         </tr>
@@ -484,7 +481,7 @@ $sections = array(
             <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
                         <tr>
                 <td style="background-color: auto;border: none !important;border-top: 0 !important;">
-                    <table style="border: 1px solid #eeeeee" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
+                    <table style="border: 1px solid #eeeeee" width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
                         <tr>
                             <td mc:edit="<?= $section['id'] ?>-sectiontitle" height="27" bgcolor="#357082" class="head" style="background-color: <?= $section['bgcolor'] ?>;color: #FFFFFF;font-size: 20px;font-weight: 400;margin-left: 6pt;padding: 2px 5px;border: one !important;border-top: 0 !important;"><?= $section['title']?></td>
                         </tr>
@@ -539,7 +536,7 @@ $sections = array(
             <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
             <tr>
                 <td style="background-color: auto;border: none !important;border-top: 0 !important;">
-                    <table border="0" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
+                    <table border="0" width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle">
                         <tr>
                             <td style="background-color: auto;border: none !important;border-top: 0 !important;">
 
