@@ -473,8 +473,7 @@ $sections = array(
                     </table>
                     <table border="0" width="735" align="center" cellpadding="3" cellspacing="0" class="container-middle banner">
                         <tr>
-                            <td align="left" bgcolor="#a09a8f" style="background-color: #a09a8f;padding: 3px 15px 3px 20px;color: #ffffff;text-transform: uppercase;font-size: 11px;border: none !important;border-top: 0 !important;"></td>
-                            <td align="right" bgcolor="#a09a8f" style="background-color: #a09a8f;padding: 3px 15px 3px 20px;color: #ffffff;text-transform: uppercase;font-size: 11px;border: none !important;border-top: 0 !important;">Autumn 2013</td>
+                            <td mc:edit="issue-date" align="right" bgcolor="#a09a8f" style="background-color: #a09a8f;padding: 3px 15px 3px 20px;color: #ffffff;text-transform: uppercase;font-size: 11px;border: none !important;border-top: 0 !important;">Issue Date</td>
                         </tr>
                     </table>
                 </td>
@@ -485,7 +484,7 @@ $sections = array(
             <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
                         <tr>
                 <td style="background-color: auto;border: none !important;border-top: 0 !important;">
-                    <table border="1" bordercolor="#cccccc" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
+                    <table style="border: 1px solid #eeeeee" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
                         <tr>
                             <td mc:edit="<?= $section['id'] ?>-sectiontitle" height="27" bgcolor="#357082" class="head" style="background-color: <?= $section['bgcolor'] ?>;color: #FFFFFF;font-size: 20px;font-weight: 400;margin-left: 6pt;padding: 2px 5px;border: one !important;border-top: 0 !important;"><?= $section['title']?></td>
                         </tr>
@@ -497,10 +496,8 @@ $sections = array(
 						<td valign="top"><a href="" style="color: #cc0000 !important;"><img mc:edit="<?= $section['id'] ?>-image" border="0" align="left" class="main-image" width="308" height="156" src="https://stanford.box.com/shared/static/ut0loizerxvgef3ht72i.png"></a></td>
 						<td width="10">&nbsp;</td>
 						<td valign="top">
-							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 20px;font-family: serif;font-weight: normal;text-decoration: none;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-size: 20px;font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Is shale gas the blue bridge to a green future?</a></div>
-							<div mc:edit="<?= $section['id']?>-teaser">
-								<p style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">Geophysics professor Mark Zoback, a leading international expert on hydraulic fracturing, is working with governments in the U.S., Canada and China to address safe extraction of shale gas.  He recently discussed this lightning rod issue with a highly-engaged audience in a new lecture series sponsored by the School of Earth Sciences and Stanford Continuing Studies. <a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #cc0000 !important;">View video...</a></p>
-							</div>
+							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 20px;font-family: serif;font-weight: normal;text-decoration: none;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-size: 20px;font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Header</a></div>
+							<div mc:edit="<?= $section['id']?>-teaser">Teaser</div>
 						</td>
 					</tr>
 				</table>
@@ -510,25 +507,24 @@ $sections = array(
 			<? if($section['listitems']) { ?>
                         <tr>
                             <td class="links" style="background-color: auto;color: #333333;font-size: 14px;font-weight: 400;text-decoration: none;line-height: 18px;margin-left: 15px;margin-right: 24pt;padding: 10px;border: none !important;border-top: 0 !important;">
-				<h3 class="title">More <?= $section['title'] ?></h3>                                
-                                <div mc:hideable>
+				<h3 class="title" mc:edit="more-<?= $section['id'] ?>">More <?= $section['title'] ?></h3>                                
                                     <ul style="color: #333333;font-family: 'Source Sans Pro', sans-serif;font-size: 14px;margin-left: 18px;padding-left: 2px;">
-                                        <li mc:repeatable style="margin: 10px;"><span><a href="https://pangea.stanford.edu/news/increase-grasslands-may-have-produced-profound-changes-climate?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="text-decoration: none;color: #333333 !important;">Increase in grasslands may have produced profound changes in climate.</a><br>
+                                        <li mc:repeatable style="margin: 10px;"><span mc:edit="more-<?= $section['id'] ?>-item">more link</span></li>
 </span></li>
                                     </ul>
-                                </div>
                             </td>
                         </tr>
                         <? } ?>
 			<? if($section['events']) { ?>
-                        <tr style=" border-bottom: 2px solid #ccc;" mc:repeatable="repeat_11" mc:repeatindex="0" mc:hideable="hideable_repeat_11_1" mchideable="hideable_repeat_11_1">
+                        <tr style=" border-bottom: 2px solid #ccc;">
                             <td valign="top" class="feature" style="background-color: auto;padding: 5px 5px 15px 5px;border: none !important;border-top: 0 !important;">
 				<div class="links" style="color: #333333;font-size: 14px;font-weight: 400;text-decoration: none;line-height: 18px;margin-left: 15px;margin-right: 24pt;padding: 10px;">
-					<strong><a href="https://stanfordconnects.stanford.edu/?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="text-decoration: none;color: #333333 !important;">Stanford+Connects: Q&A and talks featuring Pres. John Hennessy, Prof. Lynn Orr <em>et al.</em></a></strong><br>
-					November 2, 2013, 1 p.m. - Atlanta, GA<br>
-					<br>
+					<div mc:repeatable class="vevent">
+				        <span mc:edit="event-item"><strong>event title</strong><br>
+					Date/Location</span>
+					</div>
 				</div>
-        			<p style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">Please visit <a href="http://earth.stanford.edu/events?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #cc0000 !important;">earth.stanford.edu/events</a> for a comprehensive list of on-campus events including seminars and lectures.</p>
+        			<p mc:edit="event-section-description" style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">Please visit <a href="http://earth.stanford.edu/events?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #cc0000 !important;">earth.stanford.edu/events</a> for a comprehensive list of on-campus events including seminars and lectures.</p>
 </td>
                         </tr>
 
@@ -539,8 +535,8 @@ $sections = array(
             <!-- end section -->
              <? } ?>
 
+	    <!-- begin footer -->
             <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
-                        <!-- Features2 -->
             <tr>
                 <td style="background-color: auto;border: none !important;border-top: 0 !important;">
                     <table border="0" width="733" align="center" cellpadding="0" cellspacing="0" class="container-middle">
@@ -548,8 +544,8 @@ $sections = array(
                             <td style="background-color: auto;border: none !important;border-top: 0 !important;">
 
                                 <!-- credits -->
-                                <table border="0" width="362" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
-                                    <tr><td align="left" valign="top" i="" style="background-color: auto;border: none !important;border-top: 0 !important;"><p class="footer" style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
+                                <table border="0" width="50%" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
+                                    <tr><td mc:edit="footer-col1" align="left" valign="top" i="" style="background-color: auto;border: none !important;border-top: 0 !important;"><p class="footer" style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
 	<em>Earth Matters</em> is produced three times annually by the Stanford School of Earth Sciences.  We look forward to your <a href="mailto:earthmatters-newsletter@stanford.edu?subject=Earth%20Matters%3A%20Story%20Ideas" style="color: #CC0000;text-decoration: none;">story ideas</a>, <a href="mailto:earthmatters-newsletter@stanford.edu?subject=Earth%20Matters%3A%20Comments" style="color: #CC0000;text-decoration: none;">comments</a> and <a href="mailto:earthmatters-newsletter@stanford.edu?subject=Earth%20Matters%3A%20Alumni%20Updates" style="color: #CC0000;text-decoration: none;">alumni updates</a>.<br>
 	<br>
 	Nancy Peterson, Editor and Writer<br>
@@ -562,8 +558,8 @@ $sections = array(
                                     <!-- end credits -->
 
                                     <!-- contact -->
-                                    <table border="0" width="362" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
-                                        <tr><td align="left" valign="top" style="background-color: auto;border: none !important;border-top: 0 !important;"><div class="footer" style="color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
+                                    <table border="0" width="50%" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
+                                        <tr><td mc:edit="footer-col2" align="left" valign="top" style="background-color: auto;border: none !important;border-top: 0 !important;"><div class="footer" style="color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
 	<p style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">
 		<a href="http://earth.stanford.edu/?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">Stanford School of Earth Sciences</a><br>
 		397 Panama Mall<br>
@@ -586,7 +582,7 @@ $sections = array(
                         </table>
                     </td>
                 </tr>
-                <!-- end features -->
+                <!-- end footer -->
 
                 <tr><td height="35" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
 
