@@ -437,13 +437,10 @@ $sections = array(
 
 <style>
 
-  .feature td:first-child {
-    width: 200px;
-  }
-
-  @media (max-width: 640) {
-    .feature td:first-child {
-	width: 115px;
+  @media only screen and (max-width: 640px) {
+    .feature td.first {
+	width: 115px !important;
+	height: auto;
     }
   }
 </style>
@@ -488,7 +485,7 @@ $sections = array(
                             <td valign="top" class="feature" style="background-color: auto;padding: 5px 5px 15px 5px;border: none !important;border-top: 0 !important;">
 				<table border="0" cellpadding="0" cellspacing="0">
 					<tr>
-						<td width="" valign="top"><a href="" style="color: #cc0000 !important;"><img mc:edit="<?= $section['id'] ?>-image" class="main-image" border="0" src="https://stanford.box.com/shared/static/ut0loizerxvgef3ht72i.png"></a></td>
+						<td width="200" valign="top" class="first"><a href="" style="color: #cc0000 !important;"><img mc:edit="<?= $section['id'] ?>-image" class="main-image" style="max-width: 200px;" border="0" src="https://stanford.box.com/shared/static/ut0loizerxvgef3ht72i.png"></a></td>
 						<td width="10">&nbsp;</td>
 						<td valign="top">
 							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 1.5em;font-family: serif;font-weight: normal;text-decoration: none;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Lorem ipsum dolor sit amet</a></div>
