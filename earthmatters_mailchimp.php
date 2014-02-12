@@ -219,8 +219,11 @@ $sections = array(
 
 	.container-middle {
         	width: 95%;
+		_width: 730px;
 		max-width: 730px;
         }
+
+/*
 	@media only screen and (max-width: 640px){
 		.header-bg{
 			width:440px !important;
@@ -254,16 +257,6 @@ $sections = array(
 		}
 
 }	@media only screen and (max-width: 640px){
-		.xcontainer{
-			width:440px !important;
-		}
-
-}	@media only screen and (max-width: 640px){
-		.xcontainer-middle{
-			width:420px !important;
-		}
-
-}	@media only screen and (max-width: 640px){
 		.mainContent{
 			width:400px !important;
 		}
@@ -273,9 +266,10 @@ $sections = array(
 			height:auto !important;
 		}
 
-}	@media only screen and (max-width: 640px){
+}	@media (max-width: 640px){
 		.feature .main-image{
-			max-width:165px !important;
+			max-width:115px !important;
+			border: 1px solid red !important;
 		}
 
 }	@media only screen and (max-width: 640px){
@@ -389,23 +383,14 @@ $sections = array(
 		}
 
 }	@media only screen and (max-width: 479px){
-		.xcontainer{
-			width:280px !important;
-		}
-
-}	@media only screen and (max-width: 479px){
-		.xcontainer-middle{
-			width:260px !important;
-		}
-
-}	@media only screen and (max-width: 479px){
 		.mainContent{
 			width:240px !important;
 		}
 
-}	@media only screen and (max-width: 479px){
+}	@media (max-width: 479px){
 		.feature .main-image{
 			width: 115px;
+			border-color: green;
 		}
 
 }	@media only screen and (max-width: 479px){
@@ -446,7 +431,24 @@ $sections = array(
 			height:auto !important;
 		}
 
-}</style></head>
+}
+*/
+</style>
+
+<style>
+
+  .feature td:first-child {
+    width: 200px;
+  }
+
+  @media (max-width: 640) {
+    .feature td:first-child {
+	width: 115px;
+    }
+  }
+</style>
+
+</head>
  <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="width: 100%;background-color: #FFFFFF;font-family: 'Source Sans Pro', sans-serif;font-size: 14px;margin: 0;padding: 0;-webkit-font-smoothing: antialiased;">
     <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background-color: auto;border: none !important;border-top: 0 !important;">
         <table width="100%" border="0" cellpadding="0" cellspacing="0" class="container" bgcolor="FFFFFF">
@@ -486,11 +488,11 @@ $sections = array(
                             <td valign="top" class="feature" style="background-color: auto;padding: 5px 5px 15px 5px;border: none !important;border-top: 0 !important;">
 				<table border="0" cellpadding="0" cellspacing="0">
 					<tr>
-						<td valign="top"><a href="" style="color: #cc0000 !important;"><img mc:edit="<?= $section['id'] ?>-image" border="0" align="left" class="main-image" width="308" height="156" src="https://stanford.box.com/shared/static/ut0loizerxvgef3ht72i.png"></a></td>
+						<td width="" valign="top"><a href="" style="color: #cc0000 !important;"><img mc:edit="<?= $section['id'] ?>-image" class="main-image" border="0" src="https://stanford.box.com/shared/static/ut0loizerxvgef3ht72i.png"></a></td>
 						<td width="10">&nbsp;</td>
 						<td valign="top">
-							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 1.5em;font-family: serif;font-weight: normal;text-decoration: none;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Header</a></div>
-							<div mc:edit="<?= $section['id']?>-teaser">Teaser</div>
+							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 1.5em;font-family: serif;font-weight: normal;text-decoration: none;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Lorem ipsum dolor sit amet</a></div>
+							<div mc:edit="<?= $section['id']?>-teaser">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium laoreet iaculis. Vivamus egestas porta egestas. Maecenas faucibus sodales cursus. Cras velit sem, consectetur eu imperdiet at, mollis id ipsum. Phasellus justo felis, imperdiet ut suscipit in, mattis non ipsum. Phasellus iaculis et justo in fringilla. Curabitur at laoreet nibh. Nunc egestas mi vel scelerisque iaculis.</div>
 						</td>
 					</tr>
 				</table>
