@@ -439,10 +439,11 @@ $sections = array(
 
   @media only screen and (max-width: 640px) {
     .feature img {
-	max-width: 100%;
+	width: 100px !important;
+	height: 63px !important;
      }
     .feature td.first {
-	width: 115px !important;
+	width: 100px !important;
 	height: auto;
     }
   }
@@ -477,21 +478,21 @@ $sections = array(
 	    <? foreach ($sections as $section) { ?>
 	    <! -- begin section -->
             <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
+            <tr>
+                <td>
+                    <table width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
                         <tr>
-                <td style="background-color: auto;border: none !important;border-top: 0 !important;">
-                    <table style="border: 1px solid #eeeeee" width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
-                        <tr>
-                            <td mc:edit="<?= $section['id'] ?>-sectiontitle" height="27" bgcolor="#357082" class="head" style="background-color: <?= $section['bgcolor'] ?>;color: #FFFFFF;font-size: 20px;font-weight: 400;margin-left: 6pt;padding: 2px 5px;border: one !important;border-top: 0 !important;"><?= $section['title']?></td>
+                            <td mc:edit="<?= $section['id'] ?>-sectiontitle" height="27"><h2 style="color: #006697; border-bottom: 1px solid #666; font-size: 20px;font-weight: 400;"><?= $section['title']?></h2></td>
                         </tr>
 			<? if($section['features']) { ?>
                         <tr mc:repeatable>
-                            <td valign="top" class="feature" style="background-color: auto;padding: 5px 5px 15px 5px;border: none !important;border-top: 0 !important;">
+                            <td valign="top" class="feature" style="background-color: auto;border: none !important;border-top: 0 !important;">
 				<table border="0" cellpadding="0" cellspacing="0">
 					<tr>
 						<td width="" valign="top" class="first"><a href="" style="color: #cc0000 !important;"><img mc:edit="<?= $section['id'] ?>-image" class="main-image" border="0" src="https://stanford.box.com/shared/static/ut0loizerxvgef3ht72i.png"></a></td>
 						<td width="10">&nbsp;</td>
 						<td valign="top">
-							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 1.5em;font-family: serif;font-weight: normal;text-decoration: none;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Lorem ipsum dolor sit amet</a></div>
+							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 1.5em;font-family: serif;font-weight: normal;text-decoration: underline;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Lorem ipsum dolor sit amet</a></div>
 							<div mc:edit="<?= $section['id']?>-teaser">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium laoreet iaculis. Vivamus egestas porta egestas. Maecenas faucibus sodales cursus. Cras velit sem, consectetur eu imperdiet at, mollis id ipsum. Phasellus justo felis, imperdiet ut suscipit in, mattis non ipsum. Phasellus iaculis et justo in fringilla. Curabitur at laoreet nibh. Nunc egestas mi vel scelerisque iaculis.</div>
 						</td>
 					</tr>
