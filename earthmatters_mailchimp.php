@@ -497,7 +497,7 @@ $sections = array(
                         </tr>
                         <? } ?>
 			<? if($section['listitems']) { ?>
-                        <tr>
+                        <tr mc:hideable>
                             <td class="links" style="background-color: auto;color: #333333;font-size: 14px;font-weight: 400;text-decoration: none;line-height: 18px;margin-left: 15px;margin-right: 24pt;padding: 10px;border: none !important;border-top: 0 !important;">
 				<h3 class="title" mc:edit="more-<?= $section['id'] ?>">More <?= $section['title'] ?></h3>                                
                                     <ul style="color: #333333;font-family: 'Source Sans Pro', sans-serif;font-size: 14px;margin-left: 18px;padding-left: 2px;">
