@@ -84,12 +84,7 @@ $sections = array(
 		}
 		.section a{
 			color:#cc0000 !important;
-		}
-		.section a:hover{
-			text-decoration:underline !important;
-		}
-		.section .subhead a{
-			text-decoration:none !important;
+			text-decoration: underline;
 		}
 		.feature .text{
 			margin-left:310px !important;
@@ -153,15 +148,12 @@ $sections = array(
 		}
 		.links a:link{
 			color:#333333 !important;
-			text-decoration:none;
 		}
 		.links a:visited{
 			color:#333333 !important;
-			text-decoration:none;
 		}
 		.links a:hover{
 			color:#CC0000 !important;
-			text-decoration:underline !important;
 		}
 		.links .title{
 			font-size:inherit;
@@ -436,17 +428,27 @@ $sections = array(
 </style>
 
 <style>
+@media only screen and (max-width: 640px) {
+    
+  .feature img {
+    width: 150px !important;
+    height: 95px !important;
+   }
 
-  @media only screen and (max-width: 640px) {
-    .feature img {
-	width: 100px !important;
-	height: 63px !important;
-     }
-    .feature td.first {
-	width: 100px !important;
-	height: auto;
-    }
+  .feature #dean-section img {
+    width: 120px !important;
+    height: 120px !important; 
   }
+  .feature td.first {
+    width: 150px !important;
+    height: auto;
+  }
+  .feature #dean-section td.first {
+    width: 120px !important;
+    height: auto;
+  }
+}
+
 </style>
 
 </head>
@@ -482,17 +484,17 @@ $sections = array(
                 <td>
                     <table width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
                         <tr>
-                            <td mc:edit="<?= $section['id'] ?>-sectiontitle" height="27"><h2 style="color: #006697; border-bottom: 1px solid #666; font-size: 20px;font-weight: 400;"><?= $section['title']?></h2></td>
+                            <td height="27"><h2 mc:edit="<?= $section['id'] ?>-sectiontitle" style="color: #054567; border-bottom: 1px solid #666; font-size: 20px;font-weight: 600;"><?= $section['title']?></h2></td>
                         </tr>
 			<? if($section['features']) { ?>
                         <tr mc:repeatable>
                             <td valign="top" class="feature" style="background-color: auto;border: none !important;border-top: 0 !important;">
-				<table border="0" cellpadding="0" cellspacing="0">
+				<table border="0" cellpadding="0" cellspacing="0" id="<?= $section['id'] ?>-section">
 					<tr>
-						<td width="" valign="top" class="first"><a href="" style="color: #cc0000 !important;"><img mc:edit="<?= $section['id'] ?>-image" class="main-image" border="0" src="https://stanford.box.com/shared/static/ut0loizerxvgef3ht72i.png"></a></td>
+						<td width="" valign="top" class="first"><a href="" style="color: #cc0000 !important;"><img mc:edit="<?= $section['id'] ?>-image" class="main-image" border="0" src="https://d2q0qd5iz04n9u.cloudfront.net/_ssl/proxy.php/https/gallery.mailchimp.com/167e9da7acec83c4cc802b3e7/images/earthmatters_default_200x126.png"></a></td>
 						<td width="10">&nbsp;</td>
 						<td valign="top">
-							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 1.5em;font-family: serif;font-weight: normal;text-decoration: underline;color: #333333 !important;"><a href="http://www.youtube.com/watch?v=Kypbngpeqwg&utm_source=utm_source=SmartMail&utm_medium=email&utm_content=header_text&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="font-family: 'Crimson Text', serif;font-weight: normal;text-decoration: none;line-height: 20px;margin: 0 0 .25em 0;color: #333333 !important;">Lorem ipsum dolor sit amet</a></div>
+							<div class="subhead" mc:edit="<?= $section['id'] ?>-subhead" style="font-size: 1.5em;font-weight: normal;color: #333333 !important;">Lorem ipsum dolor sit amet</div>
 							<div mc:edit="<?= $section['id']?>-teaser">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium laoreet iaculis. Vivamus egestas porta egestas. Maecenas faucibus sodales cursus. Cras velit sem, consectetur eu imperdiet at, mollis id ipsum. Phasellus justo felis, imperdiet ut suscipit in, mattis non ipsum. Phasellus iaculis et justo in fringilla. Curabitur at laoreet nibh. Nunc egestas mi vel scelerisque iaculis.</div>
 						</td>
 					</tr>
@@ -540,7 +542,7 @@ $sections = array(
                             <td style="background-color: auto;border: none !important;border-top: 0 !important;">
 
                                 <!-- credits -->
-                                <table border="0" width="50%" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
+                                <table border="0" width="49%" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
                                     <tr><td mc:edit="footer-col1" align="left" valign="top" i="" style="background-color: auto;border: none !important;border-top: 0 !important;"><p class="footer" style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
 	<em>Earth Matters</em> is produced three times annually by the Stanford School of Earth Sciences.  We look forward to your <a href="mailto:earthmatters-newsletter@stanford.edu?subject=Earth%20Matters%3A%20Story%20Ideas" style="color: #CC0000;text-decoration: none;">story ideas</a>, <a href="mailto:earthmatters-newsletter@stanford.edu?subject=Earth%20Matters%3A%20Comments" style="color: #CC0000;text-decoration: none;">comments</a> and <a href="mailto:earthmatters-newsletter@stanford.edu?subject=Earth%20Matters%3A%20Alumni%20Updates" style="color: #CC0000;text-decoration: none;">alumni updates</a>.<br>
 	<br>
@@ -554,7 +556,7 @@ $sections = array(
                                     <!-- end credits -->
 
                                     <!-- contact -->
-                                    <table border="0" width="50%" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
+                                    <table border="0" width="49%" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
                                         <tr><td mc:edit="footer-col2" align="left" valign="top" style="background-color: auto;border: none !important;border-top: 0 !important;"><div class="footer" style="color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
 	<p style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">
 		<a href="http://earth.stanford.edu/?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">Stanford School of Earth Sciences</a><br>
