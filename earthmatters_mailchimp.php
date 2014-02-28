@@ -425,11 +425,14 @@ $sections = array(
 
 }
 */
+
+.section.last {
+  border-bottom: 1px solid #054567;
+}
 </style>
 
 <style>
 @media only screen and (max-width: 640px) {
-    
   .feature img {
     width: 150px !important;
     height: 95px !important;
@@ -449,6 +452,29 @@ $sections = array(
   }
 }
 
+@media only screen and (max-width: 420px) {
+  .feature img {
+    width: 100px !important;
+    height: 63px !important;
+   }
+
+  .feature #dean-section img {
+    width: 80px !important;
+    height: 80px !important; 
+  }
+  .feature td.first {
+    width: 100px !important;
+    height: auto;
+  }
+  .feature #dean-section td.first {
+    width: 80px !important;
+    height: auto;
+  }
+  .footer .feature {
+    width: 100% !important;
+  }
+}
+    
 </style>
 
 </head>
@@ -478,11 +504,20 @@ $sections = array(
             </tr>
             <!-- end banner -->
 	    <? foreach ($sections as $section) { ?>
+	    <?
+	      $pos='';
+	      if ($section === reset($sections)) {
+   		$pos = 'first';
+              }
+	      if ($section === end($sections)) {
+   		$pos = 'last';
+              }
+	    ?>
 	    <! -- begin section -->
             <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
             <tr>
                 <td>
-                    <table width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
+                    <table width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle section <?= $pos ?>">
                         <tr>
                             <td height="27"><h2 mc:edit="<?= $section['id'] ?>-sectiontitle" style="color: #054567; border-bottom: 1px solid #666; font-size: 20px;font-weight: 600;"><?= $section['title']?></h2></td>
                         </tr>
@@ -522,7 +557,7 @@ $sections = array(
 					Date/Location</span>
 					</div>
 				</div>
-        			<p mc:edit="event-section-description" style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">Please visit <a href="http://earth.stanford.edu/events?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #cc0000 !important;">earth.stanford.edu/events</a> for a comprehensive list of on-campus events including seminars and lectures.</p>
+        			<p mc:edit="event-section-description" style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">Please visit <a href="http://earth.stanford.edu/events" target="_self" style="color: #cc0000 !important;">earth.stanford.edu/events</a> for a comprehensive list of on-campus events including seminars and lectures.</p>
 </td>
                         </tr>
 
@@ -535,7 +570,7 @@ $sections = array(
 
 	    <!-- begin footer -->
             <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
-            <tr>
+            <tr class="footer">
                 <td style="background-color: auto;border: none !important;border-top: 0 !important;">
                     <table border="0" width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle">
                         <tr>
@@ -559,15 +594,15 @@ $sections = array(
                                     <table border="0" width="49%" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
                                         <tr><td mc:edit="footer-col2" align="left" valign="top" style="background-color: auto;border: none !important;border-top: 0 !important;"><div class="footer" style="color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
 	<p style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">
-		<a href="http://earth.stanford.edu/?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">Stanford School of Earth Sciences</a><br>
+		<a href="http://earth.stanford.edu/" target="_self" style="color: #CC0000;text-decoration: none;">Stanford School of Earth Sciences</a><br>
 		397 Panama Mall<br>
 		Mitchell Building 101<br>
 		Stanford CA 94305-2210<br>
 		Phone (650) 723-2544</p>
 	<ul class="footer" style="color: #333333;font-family: 'Source Sans Pro', sans-serif;font-size: 12px;margin-left: 6pt;padding-left: 2px;font-weight: 400;text-decoration: none;line-height: 15px;margin-right: 24pt;">
-		<li style="margin: 10px;"><a href="https://twitter.com/stanfordearth?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">Follow us on Twitter</a></li>
-		<li style="margin: 10px;"><a href="http://www.facebook.com/pages/Stanford-School-of-Earth-Sciences/60350681195?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">Follow us on Facebook</a></li>
-		<li style="margin: 10px;"><a href="http://www.youtube.com/user/stanfordearthscience?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">View our YouTube channel</a></li>
+		<li style="margin: 10px;"><a href="https://twitter.com/stanfordearth" target="_self" style="color: #CC0000;text-decoration: none;">Follow us on Twitter</a></li>
+		<li style="margin: 10px;"><a href="http://www.facebook.com/pages/Stanford-School-of-Earth-Sciences/60350681195" target="_self" style="color: #CC0000;text-decoration: none;">Follow us on Facebook</a></li>
+		<li style="margin: 10px;"><a href="http://www.youtube.com/user/stanfordearthscience" target="_self" style="color: #CC0000;text-decoration: none;">View our YouTube channel</a></li>
 	</ul>
 </div>
 <br>
