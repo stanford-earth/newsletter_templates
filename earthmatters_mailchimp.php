@@ -426,11 +426,14 @@ $sections = array(
 
 }
 */
+
+.section.last {
+  border-bottom: 1px solid #054567;
+}
 </style>
 
 <style>
 @media only screen and (max-width: 640px) {
-    
   .feature img {
     width: 150px !important;
     height: 95px !important;
@@ -450,6 +453,29 @@ $sections = array(
   }
 }
 
+@media only screen and (max-width: 420px) {
+  .feature img {
+    width: 100px !important;
+    height: 63px !important;
+   }
+
+  .feature #dean-section img {
+    width: 80px !important;
+    height: 80px !important; 
+  }
+  .feature td.first {
+    width: 100px !important;
+    height: auto;
+  }
+  .feature #dean-section td.first {
+    width: 80px !important;
+    height: auto;
+  }
+  .footer .feature {
+    width: 100% !important;
+  }
+}
+    
 </style>
 
 </head>
@@ -479,11 +505,20 @@ $sections = array(
             </tr>
             <!-- end banner -->
 	    <? foreach ($sections as $section) { ?>
+	    <?
+	      $pos='';
+	      if ($section === reset($sections)) {
+   		$pos = 'first';
+              }
+	      if ($section === end($sections)) {
+   		$pos = 'last';
+              }
+	    ?>
 	    <! -- begin section -->
             <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
             <tr>
                 <td>
-                    <table width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle section">
+                    <table width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle section <?= $pos ?>">
                         <tr>
                             <td height="27"><h2 mc:edit="<?= $section['id'] ?>-sectiontitle" style="color: #054567; border-bottom: 1px solid #666; font-size: 20px;font-weight: 600;"><?= $section['title']?></h2></td>
                         </tr>
@@ -537,7 +572,7 @@ $sections = array(
 
 	    <!-- begin footer -->
             <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
-            <tr>
+            <tr class="footer">
                 <td style="background-color: auto;border: none !important;border-top: 0 !important;">
                     <table border="0" width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle">
                         <tr>
