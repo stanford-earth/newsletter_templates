@@ -142,9 +142,6 @@ $sections = array(
 			font-weight:400;
 			text-decoration:none;
 			line-height:18px;
-			margin-left:15px;
-			margin-right:24pt;
-			padding:10px;
 		}
 		.links a:link{
 			color:#333333 !important;
@@ -159,6 +156,10 @@ $sections = array(
 			font-size:inherit;
 			font-weight:normal;
 			color:#CC0000;
+		}
+
+		.vevent {
+			margin-bottom: 1em;
 		}
 		p,h1,h2,h3,h4{
 			margin-top:0;
@@ -516,13 +517,14 @@ $sections = array(
 			<? if($section['events']) { ?>
                         <tr style=" border-bottom: 2px solid #ccc;">
                             <td valign="top" class="feature" style="background-color: auto;padding: 5px 5px 15px 5px;border: none !important;border-top: 0 !important;">
-				<div class="links" style="color: #333333;font-size: 14px;font-weight: 400;text-decoration: none;line-height: 18px;margin-left: 15px;margin-right: 24pt;padding: 10px;">
+				<div class="links">
 					<div mc:repeatable class="vevent">
-				        <span mc:edit="event-item"><strong>event title</strong><br>
-					Date/Location</span>
+				        <h3 mc:edit="event-item-title">event title</h3>
+					<span mc:edit="event-item-desc"></span>
+					<span mc:edit="event-item-timeloc">Date/Location</span>
 					</div>
 				</div>
-        			<p mc:edit="event-section-description" style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">Please visit <a href="http://earth.stanford.edu/events?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #cc0000 !important;">earth.stanford.edu/events</a> for a comprehensive list of on-campus events including seminars and lectures.</p>
+        			<p mc:edit="event-section-description" style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">Please visit <a href="http://earth.stanford.edu/events" target="_self" style="color: #cc0000 !important;">earth.stanford.edu/events</a> for a comprehensive list of on-campus events including seminars and lectures.</p>
 </td>
                         </tr>
 
@@ -559,15 +561,15 @@ $sections = array(
                                     <table border="0" width="49%" align="left" cellpadding="0" cellspacing="0" bgcolor="FFFFFF" class="feature" style="margin: auto;padding: 5px 5px 15px 5px;">
                                         <tr><td mc:edit="footer-col2" align="left" valign="top" style="background-color: auto;border: none !important;border-top: 0 !important;"><div class="footer" style="color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
 	<p style="margin-top: 0;margin-bottom: 0;padding-top: 0;padding-bottom: 0;">
-		<a href="http://earth.stanford.edu/?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">Stanford School of Earth Sciences</a><br>
+		<a href="http://earth.stanford.edu/" target="_self" style="color: #CC0000;text-decoration: none;">Stanford School of Earth Sciences</a><br>
 		397 Panama Mall<br>
 		Mitchell Building 101<br>
 		Stanford CA 94305-2210<br>
 		Phone (650) 723-2544</p>
 	<ul class="footer" style="color: #333333;font-family: 'Source Sans Pro', sans-serif;font-size: 12px;margin-left: 6pt;padding-left: 2px;font-weight: 400;text-decoration: none;line-height: 15px;margin-right: 24pt;">
-		<li style="margin: 10px;"><a href="https://twitter.com/stanfordearth?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">Follow us on Twitter</a></li>
-		<li style="margin: 10px;"><a href="http://www.facebook.com/pages/Stanford-School-of-Earth-Sciences/60350681195?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">Follow us on Facebook</a></li>
-		<li style="margin: 10px;"><a href="http://www.youtube.com/user/stanfordearthscience?utm_source=utm_source=SmartMail&utm_medium=email&utm_content=textlink&utm_campaign=earthmatters_autumn2013_utm_source=SmartMail" target="_self" style="color: #CC0000;text-decoration: none;">View our YouTube channel</a></li>
+		<li style="margin: 10px;"><a href="https://twitter.com/stanfordearth" style="color: #CC0000;text-decoration: none;">Follow us on Twitter</a></li>
+		<li style="margin: 10px;"><a href="http://www.facebook.com/pages/Stanford-School-of-Earth-Sciences/60350681195" style="color: #CC0000;text-decoration: none;">Follow us on Facebook</a></li>
+		<li style="margin: 10px;"><a href="http://www.youtube.com/user/stanfordearthscience" style="color: #CC0000;text-decoration: none;">View our YouTube channel</a></li>
 	</ul>
 </div>
 <br>
