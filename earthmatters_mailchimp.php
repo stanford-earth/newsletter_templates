@@ -555,7 +555,7 @@ $sections = array(
 				<div class="links">
 					<div mc:repeatable class="vevent">
 				        <h3 mc:edit="event-item-title">event title</h3>
-					<span mc:edit="event-item-desc"></span>
+					<span mc:edit="event-item-desc">Description</span>
 					<span mc:edit="event-item-timeloc">Date/Location</span>
 					</div>
 				</div>
