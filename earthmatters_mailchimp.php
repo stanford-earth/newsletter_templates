@@ -30,7 +30,7 @@ $sections = array(
     array(
         "id" => "teaching",
         "position" => 4,
-        "title" => "Teaching & Learning",
+        "title" => "Student News",
         "bgcolor" => "#9a4121",
         "features" => TRUE,
         "listitems" => TRUE,
