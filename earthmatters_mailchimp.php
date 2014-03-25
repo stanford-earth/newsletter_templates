@@ -69,7 +69,7 @@ $sections = array(
         <!-- Responsive Meta Tag -->
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 
-        <title>Earth Matters - Autumn 2013 | School of Earth Sciences - Stanford University</title>
+        <title>Earth Matters - *|MC:SUBJECT|*</title>
 
         
  <style type="text/css">
@@ -489,7 +489,7 @@ $sections = array(
                     <table border="0" width="100%" align="center" cellpadding="0" cellspacing="0" class="container-middle">
                         <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
                         <tr class="footer" style="color: #333333;font-size: 12px;font-weight: 400;text-decoration: none;line-height: 15px;margin-left: 6pt;margin-right: 24pt;">
-                            <td colspan="2" align="center" style="background-color: auto;border: none !important;border-top: 0 !important;"><a href="">View this newsletter in your browser.</a></td>
+                            <td colspan="2" align="center" style="background-color: auto;border: none !important;border-top: 0 !important;"><a href="*|ARCHIVE|*">View this newsletter in your browser.</a></td>
                         </tr>
                         <tr><td height="10" style="background-color: auto;border: none !important;border-top: 0 !important;"></td></tr>
                         <tr bgcolor="#FFFFFF">
